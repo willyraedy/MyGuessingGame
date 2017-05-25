@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Guessing Game</title>
+
+    <!-- Bootstrap and CSS here-->
+   <link rel="stylesheet" type="text/css" href="Style/style.css">
+   <link rel="stylesheet" type="text/css" href="Style/bootstrap.css">
+
+    
+<!--
+    <style>
+      .center {
+        text-align: center;
+      }
+      ul {
+          list-style: none;
+          padding: 0;
+      }
+      img {
+          display: inline;
+          width: 200px;
+          height: 100px;
+      }
+      #footer {
+          width: 100%;
+          border-top: solid 2px black;
+          background-color: white;
+          position: fixed;
+          bottom: 0;
+      }
+    </style>
+
+-->
+
+  </head>
+  <body class='game-play'>
+
+      <div id='app' class="center container">
+
+        <div id='headers' class="center">
+          <!-- Title and subtitles! -->
+          <h1 id="title-heading">Can you find the code?</h1>
+          <h2 id="subtitle-heading">Guess the correct number between 1-100 and unlock the unholy jackelope!</h2>
+        </div>
+
+        <div id='main' class="center">
+          <div id='input-parent'>
+            <!-- Player's guess input, and submit button -->
+            <input type="number" placeholder="#" autofocus=autofocus maxlength="3" id="player-input"></input>
+            <button id="submit" class="btn btn-success">Go!</button>
+          </div>
+
+          <div id='guesses'>
+            <!-- unordered list of guesses -->
+            <ul>
+                <li class="guess">?</li>
+                <li class="guess">?</li>
+                <li class="guess">?</li>
+                <li class="guess">?</li>
+                <li class="guess">?</li>
+            </ul>
+          </div>
+
+          <div id="menu-btns" class="center">
+            <!-- reset and hint buttons -->
+            <button id="hint-btn">Hint!</button>
+            <button id='reset'>Reset</button>
+          </div>
+        </div>
+      </div>
+
+
+
+    <div id='footer' class="center row">
+        <div>
+          <div class='col-sm-4' id="right-image">
+            <img src='img/fa-logo@2x.png'></img>
+          </div>
+
+          <div class='col-sm-4'>
+            <h4>Game by Willy Raedy</h4>
+          </div>
+
+          <div class='col-sm-4' id="left-image">
+            <img src='img/grace_hopper_academy.png'></img>
+          </div>
+
+
+        </div>
+    </div>
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="Code/GuessingGame.js"></script>
+
+  </body>
+</html>
