@@ -55,9 +55,8 @@ Game.prototype.playersGuessSubmission = function(guess) {
 Game.prototype.checkGuess = function() {
 
     if(this.playersGuess === this.winningNumber) {
-        //document.getElementById('submit').setAttribute('disabled', 'true');
         $('#submit, #hint-btn').prop('disabled', 'true')
-        $('body').removeClass('game-play').addClass('winning');
+        $('body').removeClass('game-play').addClass('winning'); // what i want to animate, need JQuery.Color plugin
         $(document).off('keyup', submitGuessEnter);
         return ['You Win!', 'Hit the reset button to play again!'];
         
@@ -70,7 +69,6 @@ Game.prototype.checkGuess = function() {
         $('#guesses li:nth-child(' + currentGuessIdx + ')').text(this.playersGuess);
 
         if(this.pastGuesses.length === 5) {
-            //document.getElementById('submit').setAttribute('disabled', 'true');
             $('#submit, #hint-btn').prop('disabled', 'true')
             $(document).off('keyup', submitGuessEnter);
             return ['You Lose! The winning number waz ' + this.winningNumber, 'Hit the reset button to play again!'];
@@ -100,6 +98,10 @@ Game.prototype.provideHint = function() {
 
 }
 
+// JQuery stuff
+
+// Manage guess submission
+
     function submitGuessEnter() {
         if(event.keyCode === 13) {
             submitGuess();
@@ -107,7 +109,6 @@ Game.prototype.provideHint = function() {
     }
 
 
-// jQuery stuff
     var newGame = new Game();
 
     function submitGuess() {
@@ -118,13 +119,11 @@ Game.prototype.provideHint = function() {
         $('h2').text(textArr[1]);
     }
 
-
-
     $(document).on('keyup', submitGuessEnter);
 
-
-// Allow the user to submit
     $('#submit').click(submitGuess);
+
+// Make buttons functional
     
     $('#hint-btn').click(function() {
         var hintArr = newGame.provideHint();

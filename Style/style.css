@@ -20,9 +20,8 @@
       }
       #input-parent {
           width: 160px;
-          height: 160px;
-          display: inline;
           position: relative;
+          margin: 25px auto 25px;
       }
       #player-input {
           width: 160px;
@@ -37,20 +36,12 @@
           border: thin solid black;
           border-radius: 100%;
           position: absolute;
-          top: 10px;
+          top: 110px;
           left: 110px;
           height: 50px;
           width: 50px;
 
       }
-      /*
-      #left-image {
-          text-align: left;
-      }
-      #right-image {
-          text-align: right;
-      }
-      */
       #menu-btns {
           margin: 10px auto;
       }
@@ -72,9 +63,6 @@
       }
       #app {
           background-color: rgba(256,256,256,.5);
-      }
-      #hint-btn {
-          font-family: cursive
       }
       .winning {
           background-image: url('../img/jackalope.jpg');
